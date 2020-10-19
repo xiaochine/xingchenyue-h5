@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<i-tab-bar current="{{ current }}" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="activity" current-icon="homepage_fill" title="最新"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="shop_fill" current-icon="group_fill" title="最热"></i-tab-bar-item>
+</i-tab-bar>
+<i-panel title="内容区域" >
+   <i-cell-group>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+    <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
+      <i-icon type="praise" />
+      <i-icon type="like" />
+    </i-cell>
+</i-cell-group>
+</i-panel>
+<i-tab-bar current="{{ current }}" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="activity" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="shop_fill" current-icon="group_fill" title="分类"></i-tab-bar-item>
+    <i-tab-bar-item key="homepage" icon="add" current-icon="add" title="新增"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="play" current-icon="play" title="接龙游戏"></i-tab-bar-item>
+    <i-tab-bar-item key="homepage" icon="mine" current-icon="mine" title="个人"></i-tab-bar-item>
+  
+</i-tab-bar>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+  </view>
+</view>
