@@ -10,6 +10,8 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log('登錄信息');
+        console.log(res);
       }
     })
     // 获取用户信息
@@ -34,6 +36,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    api_href: "123123123",
+    s_token: " ",
   }
 })
