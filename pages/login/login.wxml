@@ -7,7 +7,6 @@
   <view class="des">获取你的公开信息(昵称，头像等)</view>
   <view class="userinfo">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
-  
   </view>
   
 </view>

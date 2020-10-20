@@ -11,7 +11,29 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log('登錄信息');
-        console.log(res);
+        console.log( this.globalData.api_href);
+        var _this = this;
+        wx.request({
+          url: this.globalData.api_href, //仅为示例，并非真实的接口地址
+          data: {
+            action: "login",
+            js_code: res.code
+
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success(res) {
+            console.log('登录结果');
+            if(res.data.code == 0){
+              //成功
+              _this.globalData.s_token = res.data.token;
+            }
+            _this.globalData.session_key = res.data.session_key;
+            _this.globalData.open_id = res.data.open_id;
+            console.log(_this.globalData)
+          }
+        })
       }
     })
     // 获取用户信息
@@ -37,9 +59,11 @@ App({
   },
   globalData: {
     userInfo: null,
-    api_href: "123123123",
-    s_token: " ",
-    title:"星辰月诗词",
-    logo:"https://xingchenyue.oss-cn-hangzhou.aliyuncs.com/system/timg.jpg"
+    api_href: "http://192.168.7.25:88/api/do",
+    s_token: "",
+    open_id:"",
+    session_key:"",
+    title: "星辰月诗词",
+    logo: "https://xingchenyue.oss-cn-hangzhou.aliyuncs.com/system/timg.jpg"
   }
 })
