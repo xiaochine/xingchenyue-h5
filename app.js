@@ -39,5 +39,7 @@ App({
     userInfo: null,
     api_href: "123123123",
     s_token: " ",
+    title:"星辰月诗词",
+    logo:"https://xingchenyue.oss-cn-hangzhou.aliyuncs.com/system/timg.jpg"
   }
 })

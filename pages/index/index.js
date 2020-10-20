@@ -7,7 +7,10 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    visible1:false,
+    title:app.globalData.title,
+    logo:app.globalData.logo
   },
   //事件处理函数
   bindViewTap: function() {
@@ -51,5 +54,30 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  handleMobileClose: function(e) {
+    this.setData({
+      visible1: false
+    })
+  },
+  handleMobileOK: function(e) {
+    wx.showToast({
+      title: '操作成功！',  // 标题
+      icon: 'success',   // 图标类型，默认success
+      duration: 1500   // 提示窗停留时间，默认1500ms
+  })
+  },
+  /**
+   * 点赞
+   */
+  praise:function(e){
+    if(!app.globalData.userInfo){
+      //需要登录
+      wx.navigateTo({
+        url: '../login/login'
+      })
+    }else{
+      //调用点赞接口
+    }
   }
 })

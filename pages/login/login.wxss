@@ -1,0 +1,46 @@
+/* pages/login/login.wxss */
+view {
+  text-align: center;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+.divLine {
+  background: #CDCDCD;
+  width: 90%;
+  margin-left:5%;
+  height: 1rpx;
+  margin-top: 2rem;
+}
+.title{
+  text-align: left;
+    margin-left: 6%;
+    margin-top: 1rem;
+    font-size: 1.22rem;
+}
+.des{
+  text-align: left;
+  margin-left: 6%;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #9E9E9E;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.userinfo button {
+  width: 80%;
+  margin-left: 10%;
+  border: 0px solid none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  background-color: #13AF12;
+}

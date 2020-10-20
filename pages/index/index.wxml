@@ -6,8 +6,8 @@
 <i-panel title="内容区域" >
    <i-cell-group>
     <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
-      <i-icon type="praise" />
-      <i-icon type="like" />
+      <i-icon type="praise" bindtap="praise"/>
+      <i-icon type="like"  bindtap="collection"/>
     </i-cell>
     <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
       <i-icon type="praise" />
@@ -37,8 +37,12 @@
     <i-tab-bar-item key="homepage" icon="add" current-icon="add" title="新增"></i-tab-bar-item>
     <i-tab-bar-item key="group" icon="play" current-icon="play" title="接龙游戏"></i-tab-bar-item>
     <i-tab-bar-item key="homepage" icon="mine" current-icon="mine" title="个人"></i-tab-bar-item>
-  
 </i-tab-bar>
+<i-modal title="标题" visible="{{ visible1 }}" bind:ok="handleMobileOK" bind:cancel="handleMobileClose">
+  <hr/>
+    <image src="{{logo}}" class="logo"></image>
+    <view>{{title}} 获得以下权限</view>
+</i-modal>
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
