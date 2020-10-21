@@ -52,13 +52,23 @@ Page({
       data: {
         action: 'register',
         raw_data: e.detail,
-        openid:""
+        openid:app.globalData.open_id
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success (res) {
         console.log(res.data)
+        if(res.data.code == 0){
+          //成功
+          _this.globalData.s_token = res.data.token;
+        }else{
+          wx.showToast({
+            title: '授权失败',
+            icon: 'error',
+            duration: 2000
+          })
+        }
       }
     })
     this.setData({

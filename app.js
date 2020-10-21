@@ -29,9 +29,9 @@ App({
               //成功
               _this.globalData.s_token = res.data.token;
             }
-            _this.globalData.session_key = res.data.session_key;
-            _this.globalData.open_id = res.data.open_id;
-            console.log(_this.globalData)
+            _this.globalData.session_key = res.data.data.session_key;
+            _this.globalData.open_id = res.data.data.open_id;
+            console.log(_this.globalData.open_id)
           }
         })
       }
