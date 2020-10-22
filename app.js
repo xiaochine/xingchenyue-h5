@@ -10,8 +10,6 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log('登錄信息');
-        console.log( this.globalData.api_href);
         var _this = this;
         wx.request({
           url: this.globalData.api_href, //仅为示例，并非真实的接口地址
@@ -31,7 +29,7 @@ App({
             }
             _this.globalData.session_key = res.data.data.session_key;
             _this.globalData.open_id = res.data.data.open_id;
-            console.log(_this.globalData.open_id)
+            console.log(_this.globalData.session_key)
           }
         })
       }
