@@ -19,3 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.move{
+  animation: tada 1s infinite; 
+  
+}

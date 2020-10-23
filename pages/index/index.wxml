@@ -3,6 +3,8 @@
     <i-tab-bar-item key="homepage" icon="activity" current-icon="homepage_fill" title="最新"></i-tab-bar-item>
     <i-tab-bar-item key="group" icon="shop_fill" current-icon="group_fill" title="最热"></i-tab-bar-item>
 </i-tab-bar>
+<view class="move">动画</view>
+
 <i-panel title="内容区域" >
    <i-cell-group>
     <i-cell title="水调歌头" is-link label="明月几时有，把酒问青天23"  >
