@@ -1,12 +1,11 @@
 {
   "usingComponents": {
+    
     "i-button": "../../dist/button/index",
-    "i-cell-group": "../../dist/cell-group/index",
-    "i-cell": "../../dist/cell/index",
-    "i-tab-bar": "../../dist/tab-bar/index",
-    "i-tab-bar-item": "../../dist/tab-bar-item/index",
-    "i-icon": "../../dist/icon/index",
-    "i-modal": "../../dist/modal/index",
-    "i-toast": "../../dist/toast/index"
+    "i-input": "../../dist/input/index",
+    "i-radio": "../../dist/radio/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-modal": "../../dist/modal/index"
+
   }
 }
